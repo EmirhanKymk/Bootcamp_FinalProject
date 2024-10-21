@@ -103,7 +103,6 @@ namespace FinalProject.Controllers
             return View(course);
         }
 
-        // POST: Courses/Delete/5
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
