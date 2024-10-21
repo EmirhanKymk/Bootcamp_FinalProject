@@ -88,7 +88,7 @@ namespace FinalProject.Controllers
             return View(student);
         }
 
-        // GET: Students/Delete/5
+        // GET
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -107,8 +107,7 @@ namespace FinalProject.Controllers
             return View(student);
         }
 
-        // POST: Students/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var student = await _context.Students.FindAsync(id);
