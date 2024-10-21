@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Anasayfa";
+}
+
+<style>
+    /* Sayfanın tam ortasında yer almak için*/
+    .full-height {
+        height: 100vh;
+    }
+
+    /* Butonları  yukarı taşımak için */
+    .move-up {
+        transform: translateY(-100px); 
+    }
+
+    /* Butonları çok büyük yapmak için */
+    .btn-custom {
+        font-size: 80px; 
+        padding: 20px 60px; 
+    }
+</style>
+
+<div class="d-flex justify-content-center align-items-center full-height move-up">
+    <div class="btn-group">
+        <button  id="student" type="button" style="border-radius: 16px;" class="btn btn-primary btn-custom mx-2">Students</button>
+        <button id="course" type="button" style="border-radius: 16px;" class="btn btn-success btn-custom mx-2">Courses</button>
+    </div>
+</div>
+
+
+<script>
+    // JavaScript kodları buraya yazılır
+    document.getElementById("student").addEventListener("click", function () {
+        window.location = "/Students";
+    });
+
+    document.getElementById("course").addEventListener("click", function () {
+        window.location = "/Courses";
+    });
+</script>

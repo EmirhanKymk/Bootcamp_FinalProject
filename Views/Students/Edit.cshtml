@@ -1,0 +1,41 @@
+﻿@model FinalProject.Models.Student
+
+@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<h1>Edit Student</h1>
+
+<hr />
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" style="width: 300px" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName" class="control-label mt-3"></label>
+        <input asp-for="LastName" style="width: 300px" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Credits" class="control-label mt-3"></label>
+        <input asp-for="Credits" style="width: 300px" class="form-control" />
+        <span asp-validation-for="Credits" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input asp-for="StudentId" value="@Model.StudentId" type="hidden" class="form-control" />
+    </div>
+
+    <div class="form-group mt-3">
+        <input  type="submit" value="Save Changes" class="btn btn-primary" />
+    </div>
+</form>
+
+<div style="">
+    <a asp-action="Index" class="btn btn-primary mt-3" style="background-color:yellow; color:black;" >Back to Student List</a>
+</div>
